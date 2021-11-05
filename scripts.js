@@ -12,14 +12,14 @@ genreApp.getGenres = () => {
     })
     console.log(url);
 
-    // fetch(url)
-    //     .then((response) => {
-    //         return response.json();
-    //     })
-    //     .then((jsonResponse) => {
-    //         console.log(jsonResponse);
-    //         genreApp.displayGenres(jsonResponse);
-    //     })
+    fetch(url)
+        .then((response) => {
+            return response.json();
+        })
+        .then((jsonResponse) => {
+            console.log(jsonResponse);
+            genreApp.displayGenres(jsonResponse);
+        })
 }
 
 genreApp.getGenres();
