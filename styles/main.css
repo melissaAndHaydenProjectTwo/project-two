@@ -284,31 +284,6 @@ li {
   list-style: none;
 }
 
-img {
-  width: 100%;
-}
-
-.wrapper {
-  max-width: 1400px;
-  width: 68%;
-  margin: 0 auto;
-}
-
-a {
-  color: #fcfbf7;
-  font-family: "Rubik", sans-serif;
-  font-size: 15px;
-}
-
-body {
-  height: 100vh;
-  background-color: #050400;
-}
-
-li {
-  color: #fcfbf7;
-}
-
 main {
   position: relative;
 }
@@ -344,4 +319,29 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+img {
+  width: 100%;
+}
+
+.wrapper {
+  max-width: 1400px;
+  width: 68%;
+  margin: 0 auto;
+}
+
+a {
+  color: #fcfbf7;
+  font-family: "Rubik", sans-serif;
+  font-size: 15px;
+}
+
+body {
+  height: 100vh;
+  background-color: #050400;
+}
+
+li {
+  color: #fcfbf7;
 }
