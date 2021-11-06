@@ -6,10 +6,12 @@ footer {
     width: 100%;
     text-align: center;
     margin: 0;
+    margin-top: -20px;
     p {
         font-family: $primary-font;
         color: $primary-black;
         padding: 7px;
+        margin: 0;
         a {
             font-family: $primary-font;
             color: $primary-black;
