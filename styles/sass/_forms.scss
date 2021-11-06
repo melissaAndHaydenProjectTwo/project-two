@@ -1,1 +1,71 @@
 // Label on the "MAIN" form needs to GTFO 
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+        label {
+            color: $primary-white;
+            font-family: $primary-font;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.5rem;
+        }
+        input {
+            width: 70%;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 0 10px 20px;
+            margin-bottom: 10px;
+            font-family: $secondary-font;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        button {
+            background-color: $primary-black;
+            color: $primary-white;
+            font-family: $primary-font;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.5rem;
+            width: 70%;
+            padding: 12px;
+            border: 1px solid $primary-white;
+            border-radius: 25px;
+        }
+    }
+    ::placeholder {
+        text-transform: uppercase;
+        font-family: $secondary-font;
+        font-weight: 300;
+    }
+
+.wrapper form {
+    display: grid;
+    grid-template-columns: 1fr .3fr;
+    grid-template-rows: 1fr 1fr;
+    width: 70%;
+}
+.wrapper label {
+    visibility: hidden;
+    grid-column: 1 / -1;
+}
+.wrapper input{
+    grid-column: 1 / 2;
+    width: 100%;
+    border-radius: 25px 0 0 25px;
+}
+.wrapper button {
+    background-image: url('../assets/megaphone2.png');
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+    padding: 23px;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    border: 1px solid $primary-white;
+    border-radius: 0 25px 25px 0;
+}
