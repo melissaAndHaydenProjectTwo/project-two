@@ -1,0 +1,22 @@
+//IMPORT PARTIALS
+@import "colors";
+@import "fonts";
+@import "forms";
+@import "footer";
+@import "movieCard";
+
+
+
+//GENERAL STYLING
+
+// this stying and footer page styling is to test the compiler 
+a {
+    color: $primary-white;
+    font-family: $secondary-font;
+    font-size: 15px;
+}
+
+body {
+    height: 100vh;
+    background-color: $primary-black;
+}

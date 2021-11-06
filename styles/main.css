@@ -1,0 +1,27 @@
+footer {
+  background-color: #fcfbf7;
+  height: 35px;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+footer p {
+  font-family: "Bebas Neue", cursive;
+  color: #050400;
+  padding: 7px;
+}
+footer p a {
+  font-family: "Bebas Neue", cursive;
+  color: #050400;
+}
+
+a {
+  color: #fcfbf7;
+  font-family: "Rubik", sans-serif;
+  font-size: 15px;
+}
+
+body {
+  height: 100vh;
+  background-color: #050400;
+}
