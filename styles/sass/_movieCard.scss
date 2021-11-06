@@ -1,0 +1,17 @@
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 60px 40px;
+    border: 1px solid $primary-white;
+    border-radius: 5%;
+    padding: 50px;
+        .cardContainer {
+            border: 1px solid $primary-white;
+            border-radius: 5%;
+        }
+}
+
+li {
+    list-style: none;
+}
