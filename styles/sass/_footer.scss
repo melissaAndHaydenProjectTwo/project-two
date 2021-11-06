@@ -1,0 +1,18 @@
+
+//Testing stying with compiler
+footer {
+    background-color: $primary-white;
+    height: 35px;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    p {
+        font-family: $primary-font;
+        color: $primary-black;
+        padding: 7px;
+        a {
+            font-family: $primary-font;
+            color: $primary-black;
+        }
+    }
+}
