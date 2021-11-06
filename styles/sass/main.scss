@@ -5,10 +5,11 @@
 @import "forms";
 @import "footer";
 @import "movieCard";
+@import "social";
 
 //GENERAL STYLING
 
-// this stying and footer page styling is to test the compiler 
+// this stying and footer page styling is to test the compiler
 img {
     width: 100%;
 }
@@ -29,7 +30,6 @@ body {
     height: 100vh;
     background-color: $primary-black;
 }
-
 
 li {
     color: $primary-white;
