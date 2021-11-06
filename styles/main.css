@@ -252,18 +252,32 @@ footer p a {
   color: #050400;
 }
 
-.gridContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 60px 40px;
+main section {
   border: 1px solid #fcfbf7;
   border-radius: 5%;
+}
+main section .gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: 1fr 1fr;
+  gap: 60px 60px;
+  margin: 0 auto;
   padding: 50px;
 }
-.gridContainer .cardContainer {
-  border: 1px solid #fcfbf7;
+main section .gridContainer .cardContainer {
+  border: 2px solid #fcfbf7;
   border-radius: 5%;
+  font-family: "Bebas Neue", cursive;
+  font-weight: 400;
+  letter-spacing: 2px;
+  width: 200px;
+  margin: 0 auto;
+}
+main section .gridContainer .cardContainer ul {
+  padding: 15px;
+}
+main section .gridContainer .cardContainer ul h2 {
+  padding-top: 50px;
 }
 
 li {
@@ -276,7 +290,7 @@ img {
 
 .wrapper {
   max-width: 1400px;
-  width: 80%;
+  width: 68%;
   margin: 0 auto;
 }
 
