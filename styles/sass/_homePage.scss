@@ -1,0 +1,11 @@
+.headerWrapper {
+    max-width: 1400px;
+    width: 60%;
+    height: 100vh;
+    margin: 6% auto;
+    border: 1px solid $primary-white;
+    border-radius: 25px 25px 0 0;
+    img {
+        padding: 5% 20%;
+    }
+}
