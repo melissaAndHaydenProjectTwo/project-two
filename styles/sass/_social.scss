@@ -5,26 +5,31 @@ main {
 }
 
 .socials {
-    // position: absolute;
-    bottom: 0px;
-    left: 0px;
+    position: absolute;
+    display: flex;
+    bottom: 50px;
+    left: 5px;
     margin-bottom: 0;
+    width: 195.3px;
     .socialsList {
-        width: 25%;
-        padding-left: 0;
-        li {
-            display: flex;
-            align-items: center;
-            padding: 0;
-        }
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-evenly;
         a {
-            font-size: 100%;
+            margin-top: 3px;
+            padding: 3px;
+            text-decoration: none;
         }
     }
 }
 
 .socialLogos {
-    width: 40px;
-    display: flex;
-    flex-direction: row;
+    width: 25%;
+    margin-top: -5px;
+    img {
+        margin-bottom: -18px;
+        margin-top: 1px;
+    }
 }
+
