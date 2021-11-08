@@ -3,6 +3,9 @@ main section {
     border-radius: 15px 15px 0 0;
     border-bottom: none;
     padding-bottom: 100px;
+    @media (max-width: 1200px){
+            border: none;
+    }
         .gridContainer {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
