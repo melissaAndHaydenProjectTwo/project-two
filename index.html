@@ -10,7 +10,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik:ital,wght@0,700;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
-    <script src="https://kit.fontawesome.com/0dca288eff.js" crossorigin="anonymous"></script>
     <link href="./styles/main.css" rel="stylesheet">
     <title>That Genre</title>
 </head>
@@ -24,7 +23,7 @@
             <form action="submit">
                 <label for="genre">search for your favourite genre</label>
                 <input type="text" name="genre" id="genre" placeholder="Comedy" required>
-                <button type="submit">Show me the movies!</button>
+                <button type="submit" id="movieButton">Show me the movies!</button>
             </form>
         </section>
     </header>
@@ -74,83 +73,8 @@
             <!-- HOW THE HTML WILL BE STRUCTURED WHEN JS EVENTLISTENER IS ACTIVATED -->
 
             <!-- GENRE MOVIE CARDS GO IN HERE -->
-            <ul class="gridContainer wrapper">
-                <li class="cardContainer">
-                    <ul>
-                        <li>
-                            <h2>Fargo</h2>
-                        </li>
-                        <li>
-                            <p>Year</p>
-                        </li>
-                        <li>
-                            <p>Rating</p>
-                        </li>
-                        <li>
-                            <p>Run-Time</p>
-                        </li>
-                        <li>
-                            <p>Directors</p>
-                        </li>
-                    </ul>
-                </li>
-                <li class="cardContainer">
-                    <ul>
-                        <li>
-                            <h2>Movie Title</h2>
-                        </li>
-                        <li>
-                            <p>Year</p>
-                        </li>
-                        <li>
-                            <p>Rating</p>
-                        </li>
-                        <li>
-                            <p>Run-Time</p>
-                        </li>
-                        <li>
-                            <p>Directors</p>
-                        </li>
-                    </ul>
-                </li>
-                <li class="cardContainer">
-                    <ul>
-                        <li>
-                            <h2>Movie Title</h2>
-                        </li>
-                        <li>
-                            <p>Year</p>
-                        </li>
-                        <li>
-                            <p>Rating</p>
-                        </li>
-                        <li>
-                            <p>Run-Time</p>
-                        </li>
-                        <li>
-                            <p>Directors</p>
-                        </li>
-                    </ul>
-                </li>
-                <li class="cardContainer">
-                    <ul>
-                        <li>
-                            <h2>Movie Title</h2>
-                        </li>
-                        <li>
-                            <p>Year</p>
-                        </li>
-                        <li>
-                            <p>Rating</p>
-                        </li>
-                        <li>
-                            <p>Run-Time</p>
-                        </li>
-                        <li>
-                            <p>Directors</p>
-                        </li>
-                    </ul>
-                </li>
+            <ul class="gridContainer wrapper" id="cards">
+                <!-- JAVASCRIPT CONTENT GETS APPENDED HERE -->
             </ul>
         </section>
     </main>
