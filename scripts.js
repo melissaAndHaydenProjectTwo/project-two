@@ -3,24 +3,22 @@ const genreApp = {};
 
 genreApp.apiKey = '321a6d0985356d8f9304cc76a294aab3';
 genreApp.apiUrl = 'https://api.themoviedb.org/3/discover/movie';
-genreApp.apiURL2 = 'https://api.themoviedb.org/3/genre/movie/list';
-genreApp.arrayOfMovies = []
+const arrayOfMovies = []
 
+// CALL API 
 genreApp.callApi = async function (url, page = 1) {
     const address = new URL(url);
     address.search = new URLSearchParams({
         api_key: genreApp.apiKey,
         page,
-        // with_genres: '35'
     })
     await fetch(address)
         .then((response) => {
             return response.json();
         })
         .then((jsonResult) => {
-            // console.log(jsonResult);
             if (jsonResult.results.length > 0) {
-                genreApp.arrayOfMovies.push(...jsonResult.results);
+                arrayOfMovies.push(...jsonResult.results);
                 if (jsonResult.page !== 8) {
                     genreApp.callApi(url, page + 1);
                 } 
@@ -28,63 +26,73 @@ genreApp.callApi = async function (url, page = 1) {
         })
 }
 
+// CONNECT USER INPUT TO GENRE_IDS FROM API
 genreApp.getGenres = () => {
     genreApp.callApi(genreApp.apiUrl);
-    console.log(genreApp.arrayOfMovies);
-    // const url2 = new URL(genreApp.apiURL2);
-    // url2.search = new URLSearchParams({
-    //     api_key: genreApp.apiKey,
-    // })
+    const movieGenres = arrayOfMovies.filter((genres) => {
+        for (let i = 0; i < genres.genre_ids.length; i++){
+            if (genres.genre_ids[i] === 28) {
+                return genres
+            }
+        };
+    });
 
-    // fetch(url2)
-    //     .then((response) => {
-    //         return response.json();
-    //     })
-    //     .then((jsonResult) => {
-    //         console.log(jsonResult);
-    //         genreApp.displayGenreIds(jsonResult);
-    //     })
+// GET FOUR MOVIES FROM THE LARGE ARRAY BASED ON THE USER INPUT
+    const fourMoviesArray = movieGenres 
+        .map(x => ({ x, r: Math.random() }))
+        .sort((a, b) => a.r - b.r)
+        .map(a => a.x)
+        .slice(0, 4);
+        // return fourMoviesArray
+
+    // PRINT THE FOUR MOVIE RESULTS TO THE PAGE 
+    fourMoviesArray.forEach((movie) => {
+        const cardContainer = document.querySelector('.gridContainer');
+        const movieCard = document.createElement('li');
+        movieCard.classList.add('cardContainer');
+        const ulEl = document.createElement('ul');
+        const liEl = document.createElement('li');
+        const titleHeading = document.createElement('h2');
+        // const paragraph = document.createElement('p');
+        titleHeading.innerHTML = `${fourMoviesArray[1].title}`
+        liEl.appendChild(titleHeading);
+        ulEl.appendChild(liEl);
+        movieCard.appendChild(ulEl);
+        cardContainer.appendChild(movieCard);
+    });
+    // console.log(genreApp.getGenres);
 }
 
-genreApp.displayGenres = (arrayDataFromApi) => {
+// const genresArray = [
+    //     { genre: "Action", id: 28 },
+    //     { genre: "Adventure", id: 12 },
+    //     { genre: "Animation", id: 16 },
+    //     { genre: "Comedy", id: 35 },
+    //     { genre: "Crime", id: 80 },
+    //     { genre: "Documentary", id: 99 },
+    //     { genre: "Drama", id: 18 },
+    //     { genre: "Family", id: 10751 },
+    //     { genre: "Fantasy", id: 14 },
+    //     { genre: "History", id: 36 },
+    //     { genre: "Horror", id: 27 },
+    //     { genre: "Music", id: 10402 },
+    //     { genre: "Mystery", id: 9648 },
+    //     { genre: "Romance", id: 10749 },
+    //     { genre: "Sci-Fi", id: 878 },
+    //     { genre: "TV Movie", id: 10770 },
+    //     { genre: "Thriller", id: 53 },
+    //     { genre: "War", id: 10752 },
+    //     { genre: "Western", id: 37 }
+    // ]
     
-    // if (userInput === genreID) {
-        //     // const cardContainer = document.querySelector('.cardContainer');
-        //     // // const movieCard = arrayDataFromApi.results;
-        //     //     const ulEl = document.createElement('ul');
-        //     //     const liEl = document.createElement('li');
-        //     //     const paragraph = document.createElement('p');
-        //     //     paragraph.innerHTML = `TITLE: ${arrayDataFromApi.results[0].original_title}`
-        // }
-        //     liEl.appendChild(paragraph);
-        //     ulEl.appendChild(liEl);
-        //     cardContainer.appendChild(ulEl);
-        
-        
-        const selectedGenre = arrayDataFromApi.results.filter((genre) => {
-            // console.log(genre.genre_ids);
-            
+    genreApp.init = () => {
+        const movieButton = document.querySelector('form').addEventListener('submit', function (e) {
+            document.getElementById('cards').innerText = ''
+            genreApp.getGenres();
+            e.preventDefault();
+            const userInput = document.getElementById('genre').value;
         });
-        
-        
-        // const selectedGenre = userInput.filter((genre) => {
-            //     return genre === genre_ids[0];
-            // });
-            
-        }
-        
-        genreApp.displayGenreIds = (genresArray) => {
-            
-        }
-        
-        genreApp.init = () => {
-            const movieButton = document.querySelector('form').addEventListener('submit', function (e) {
-                e.preventDefault();
-                genreApp.getGenres();
-                const userInput = document.getElementById('genre').value;
-                console.log(userInput)
-            });
-        }
+    }
         
         genreApp.init();
         // A page where the user is able to input a genre of movie and is met with movie reccomendations.
