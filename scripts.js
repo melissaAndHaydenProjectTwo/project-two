@@ -19,7 +19,7 @@ genreApp.callApi = async function (url, page = 1) {
         .then((jsonResult) => {
             if (jsonResult.results.length > 0) {
                 arrayOfMovies.push(...jsonResult.results);
-                if (jsonResult.page !== 8) {
+                if (jsonResult.page !== 20) {
                     genreApp.callApi(url, page + 1);
                 } 
             }
@@ -28,73 +28,73 @@ genreApp.callApi = async function (url, page = 1) {
 
 // CONNECT USER INPUT TO GENRE_IDS FROM API
 genreApp.getGenres = () => {
+    
     genreApp.callApi(genreApp.apiUrl);
+    const genreChoices = document.querySelectorAll('option')
+    console.log(genreChoices)
+    let genreType 
+    genreChoices.forEach((param) => {
+        if (param.selected === true) {
+            genreType = param.id
+        }
+    })
+    
     const movieGenres = arrayOfMovies.filter((genres) => {
         for (let i = 0; i < genres.genre_ids.length; i++){
-            if (genres.genre_ids[i] === 28) {
+            if (genres.genre_ids[i] == genreType) {
                 return genres
             }
         };
     });
 
-// GET FOUR MOVIES FROM THE LARGE ARRAY BASED ON THE USER INPUT
-    const fourMoviesArray = movieGenres 
-        .map(x => ({ x, r: Math.random() }))
-        .sort((a, b) => a.r - b.r)
-        .map(a => a.x)
-        .slice(0, 4);
-        // return fourMoviesArray
+    const fourMoviesArray = movieGenres
+    .map(x => ({ x, r: Math.random() }))
+    .sort((a, b) => a.r - b.r)
+    .map(a => a.x)
+    .slice(0, 4);    
 
+    // GET FOUR MOVIES FROM THE LARGE ARRAY BASED ON THE USER INPUT
     // PRINT THE FOUR MOVIE RESULTS TO THE PAGE 
+
+    const cardContainer = document.querySelector('.gridContainer');
+    cardContainer.innerHTML = ""
+
     fourMoviesArray.forEach((movie) => {
-        const cardContainer = document.querySelector('.gridContainer');
         const movieCard = document.createElement('li');
         movieCard.classList.add('cardContainer');
         const ulEl = document.createElement('ul');
         const liEl = document.createElement('li');
+
         const titleHeading = document.createElement('h2');
-        // const paragraph = document.createElement('p');
-        titleHeading.innerHTML = `${fourMoviesArray[1].title}`
+        titleHeading.innerText = movie.title
+
+        const releaseDate = document.createElement('p');
+        releaseDate.innerText = `RELEASE DATE: ${movie.release_date}`
+
         liEl.appendChild(titleHeading);
+        liEl.appendChild(releaseDate);
         ulEl.appendChild(liEl);
         movieCard.appendChild(ulEl);
         cardContainer.appendChild(movieCard);
-    });
-    // console.log(genreApp.getGenres);
+        });
 }
 
-// const genresArray = [
-    //     { genre: "Action", id: 28 },
-    //     { genre: "Adventure", id: 12 },
-    //     { genre: "Animation", id: 16 },
-    //     { genre: "Comedy", id: 35 },
-    //     { genre: "Crime", id: 80 },
-    //     { genre: "Documentary", id: 99 },
-    //     { genre: "Drama", id: 18 },
-    //     { genre: "Family", id: 10751 },
-    //     { genre: "Fantasy", id: 14 },
-    //     { genre: "History", id: 36 },
-    //     { genre: "Horror", id: 27 },
-    //     { genre: "Music", id: 10402 },
-    //     { genre: "Mystery", id: 9648 },
-    //     { genre: "Romance", id: 10749 },
-    //     { genre: "Sci-Fi", id: 878 },
-    //     { genre: "TV Movie", id: 10770 },
-    //     { genre: "Thriller", id: 53 },
-    //     { genre: "War", id: 10752 },
-    //     { genre: "Western", id: 37 }
-    // ]
-    
-    genreApp.init = () => {
-        const movieButton = document.querySelector('form').addEventListener('submit', function (e) {
-            document.getElementById('cards').innerText = ''
-            genreApp.getGenres();
-            e.preventDefault();
-            const userInput = document.getElementById('genre').value;
-        });
-    }
+genreApp.setupEventListeners = () => {
+    document.querySelector('form').addEventListener('submit', (event) => {
         
-        genreApp.init();
+        event.preventDefault();
+        genreApp.getGenres();
+        // const genreChoice = document.getElementById('genre').value;
+        // document.querySelector('').innerHTML = ""
+    });
+}
+    
+genreApp.init = () => {
+        genreApp.setupEventListeners();
+        genreApp.getGenres()
+}
+        
+genreApp.init();
         // A page where the user is able to input a genre of movie and is met with movie reccomendations.
         
         // There will be a button for the user to submit their response
