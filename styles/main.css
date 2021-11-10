@@ -419,6 +419,11 @@ main {
   margin-bottom: 0;
   width: 195.3px;
 }
+@media (max-width: 1000px) {
+  .socials {
+    display: none;
+  }
+}
 .socials .socialsList {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -445,6 +450,46 @@ main {
 .socialLogos img {
   margin-bottom: -18px;
   margin-top: 1px;
+}
+
+.hamburger {
+  background-color: transparent;
+  border: 0;
+  color: #fcfbf7;
+  font-size: 5rem;
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 1000px) {
+  .hamburger {
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 90%;
+  }
+}
+
+.socialHide {
+  display: none;
+  top: 70px;
+  left: 90.25%;
+  background-color: transparent;
+  font-size: 25px;
+}
+@media (max-width: 1000px) {
+  .socialHide {
+    display: none;
+    top: 70px;
+    left: 90.25%;
+    background-color: transparent;
+    font-size: 25px;
+  }
+  .socialHide img {
+    width: 5%;
+  }
 }
 
 .headerWrapper {

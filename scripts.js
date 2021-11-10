@@ -108,4 +108,3 @@ genreApp.init();
 // If the user decides to search for another genre, the search bar will remain in its position at the top of the page.
 
 // Create an app object (genreApp)
-
