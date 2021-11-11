@@ -15,7 +15,9 @@ document.onreadystatechange = function () {
                 menu.style.display = "none";
             }
         });
-        // console.log(hamburgerMenu)
 
     }
 }
+
+// cardContainer.innerHTML = ""
+// cardContainer.appendChild(movieCard);

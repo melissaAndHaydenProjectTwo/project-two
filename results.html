@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik:ital,wght@0,700;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link href="./styles/main.css" rel="stylesheet">
+    <title>Genre Results 🍿</title>
+</head>
+<body>
+    <main>
+        <!-- Corner LOGO named results page-->
+        <div class="secondaryLogo">
+            <img src="./assets/thatGenreSecondaryLogo.png" alt="That Genre">
+        </div>
+        <button id="hamburger" class="hamburger">=</button>
+        <div class="socialHide" id="socialHide">
+            <img src="./assets/facebookLogo.png" alt="logo for Facebook">
+            <img src="./assets/instagramlogo.png" alt="logo for Instagram">
+            <img src="./assets/twitterLogo.png" alt="logo for Twitter">
+        </div>
+        <div class="socials" id="socialMenu">
+            <div class="socialLogos">
+                <img src="./assets/facebookLogo.png" alt="logo for Facebook">
+                <img src="./assets/instagramlogo.png" alt="logo for Instagram">
+                <img src="./assets/twitterLogo.png" alt="logo for Twitter">
+            </div>
+            <div class="socialsList">
+                <a href="#">/ThatGenreBook</a>
+                <a href="#">@ThatGenreGram</a>
+                <a href="#">@ThatGenreTweet</a>
+            </div>
+        </div>
+        <section class="wrapper">
+            <form action="submit" id="resultsForm">
+                    <label for="genre">search for your favourite genre</label>
+                    <select name="genre" id="genre">
+                        <option value="action" id="28">Action</option>
+                        <option value="adventure" id="12">Adventure</option>
+                        <option value="animation" id="16">Animation</option>
+                        <option value="comedy" id="35">Comedy</option>
+                        <option value="crime" id="80">Crime</option>
+                        <option value="documentary" id="99">Documentary</option>
+                        <option value="drama" id="18">Drama</option>
+                        <option value="family" id="10751">Family</option>
+                        <option value="fantasy" id="14">Fantasy</option>
+                        <option value="history" id="36">History</option>
+                        <option value="horror" id="27">Horror</option>
+                        <option value="music" id="10402">Music</option>
+                        <option value="mystery" id="9648">Mystery</option>
+                        <option value="romance" id="10749">Romance</option>
+                        <option value="sci-fi" id="878">Sci-Fi</option>
+                        <option value="tvMovie" id="10770">TV Movie</option>
+                        <option value="thriller" id="53">Thriller</option>
+                        <option value="war" id="10752">War</option>
+                        <option value="western" id="37">Western</option>
+                    </select>
+                    <!-- button -->
+                <button></button> 
+            </form>
+            <!-- HOW THE HTML WILL BE STRUCTURED WHEN JS EVENTLISTENER IS ACTIVATED -->
+            <!-- GENRE MOVIE CARDS GO IN HERE -->
+            <ul class="gridContainer wrapper" id="cards">
+                <!-- JAVASCRIPT CONTENT GETS APPENDED HERE -->
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>Made at <a href="https://junocollege.com/">Juno College</a></p>
+    </footer>
+    <script src="results.js"></script>
+    <script src="./hamburger.js"></script>
+</body>
+</html>

@@ -11,7 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik:ital,wght@0,700;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
     <link href="./styles/main.css" rel="stylesheet">
-    <title>That Genre</title>
+    <title>That Genre 🍿</title>
 </head>
 
 <body>
@@ -19,10 +19,16 @@
         <!--sass patial named homePage for heaader-->
         <section class="headerWrapper">
             <!-- This is where the "H1" will go -->
+            <!-- <button id="hamburger" class="hamburger">=</button>
+            <div class="socialHide" id="socialHide">
+                <img src="./assets/facebookLogo.png" alt="logo for Facebook">
+                <img src="./assets/instagramlogo.png" alt="logo for Instagram">
+                <img src="./assets/twitterLogo.png" alt="logo for Twitter">
+            </div> -->
             <img src="./assets/thatGenreLogo.png" alt="Application Logo with a megaphone">
-            <form action="submit">
+            <form action="results.html" id="genreFrom">
                 <label for="genre">search for your favourite genre</label>
-                <select name="genre" id="genre">
+                <select name="genre" id="genre" required>
                     <option value="action" id="28">Action</option>
                     <option value="adventure" id="12">Adventure</option>
                     <option value="animation" id="16">Animation</option>
@@ -48,8 +54,8 @@
         </section>
     </header>
     <main>
-        <!-- Corner LOGO named results page-->
-        <div class="secondaryLogo">
+
+        <!-- <div class="secondaryLogo">
             <img src="./assets/thatGenreSecondaryLogo.png" alt="That Genre">
         </div>
         <button id="hamburger" class="hamburger">=</button>
@@ -70,7 +76,7 @@
                 <a href="#">@ThatGenreTweet</a>
             </div>
         </div>
-        <section class="wrapper">
+        <section class="wrapper"> -->
             <!-- <form action="submit">
                 <label for="genre">search for your favourite genre</label>
                 <select name="genre" id="genre">
@@ -94,22 +100,17 @@
                     <option value="war" id="10752">War</option>
                     <option value="western" id="37">Western</option>
                 </select>
-                <!-- button -->
-                <!-- <button></button>
-            </form> --> 
+                <button></button>
+            </form> -->
 
-            <!-- HOW THE HTML WILL BE STRUCTURED WHEN JS EVENTLISTENER IS ACTIVATED -->
-
-            <!-- GENRE MOVIE CARDS GO IN HERE -->
-            <ul class="gridContainer wrapper" id="cards">
-                <!-- JAVASCRIPT CONTENT GETS APPENDED HERE -->
+            <!-- <ul class="gridContainer wrapper" id="cards">
             </ul>
         </section>
-    </main>
+    </main> -->
     <footer>
         <p>Made at <a href="https://junocollege.com/">Juno College</a></p>
     </footer>
     <script src="scripts.js"></script>
-    <script src="./hamburger.js"></script>
+    <!-- <script src="./hamburger.js"></script> -->
 </body>
 </html>

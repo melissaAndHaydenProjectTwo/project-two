@@ -28,17 +28,16 @@ genreApp.callApi = async function (url, page = 1) {
 
 // CONNECT USER INPUT TO GENRE_IDS FROM API
 genreApp.getGenres = () => {
-    
     genreApp.callApi(genreApp.apiUrl);
     const genreChoices = document.querySelectorAll('option')
-    console.log(genreChoices)
+    // console.log(genreChoices)
     let genreType 
     genreChoices.forEach((param) => {
         if (param.selected === true) {
             genreType = param.id
         }
     })
-    
+
     const movieGenres = arrayOfMovies.filter((genres) => {
         for (let i = 0; i < genres.genre_ids.length; i++){
             if (genres.genre_ids[i] == genreType) {
@@ -53,45 +52,46 @@ genreApp.getGenres = () => {
     .map(a => a.x)
     .slice(0, 4);    
 
+    window.localStorage.setItem('cardContainer', JSON.stringify(arrayOfMovies))
+    window.localStorage.getItem('cardContainer')
+    // console.log(window.localStorage.getItem('cardContainer'))
     // GET FOUR MOVIES FROM THE LARGE ARRAY BASED ON THE USER INPUT
     // PRINT THE FOUR MOVIE RESULTS TO THE PAGE 
 
-    const cardContainer = document.querySelector('.gridContainer');
-    cardContainer.innerHTML = ""
+    // const cardContainer = document.querySelector('.gridContainer');
+    // cardContainer.innerHTML = ""
 
-    fourMoviesArray.forEach((movie) => {
-        const movieCard = document.createElement('li');
-        movieCard.classList.add('cardContainer');
-        const ulEl = document.createElement('ul');
-        const liEl = document.createElement('li');
+    // fourMoviesArray.forEach((movie) => {
+    //     const movieCard = document.createElement('li');
+    //     movieCard.classList.add('cardContainer');
+    //     const ulEl = document.createElement('ul');
+    //     const liEl = document.createElement('li');
 
-        const titleHeading = document.createElement('h2');
-        titleHeading.innerText = movie.title
+    //     const titleHeading = document.createElement('h2');
+    //     titleHeading.innerText = movie.title
 
-        const releaseDate = document.createElement('p');
-        releaseDate.innerText = `RELEASE DATE: ${movie.release_date}`
+    //     const releaseDate = document.createElement('p');
+    //     releaseDate.innerText = `RELEASE DATE: ${movie.release_date}`
 
-        liEl.appendChild(titleHeading);
-        liEl.appendChild(releaseDate);
-        ulEl.appendChild(liEl);
-        movieCard.appendChild(ulEl);
-        cardContainer.appendChild(movieCard);
-        });
+    //     liEl.appendChild(titleHeading);
+    //     liEl.appendChild(releaseDate);
+    //     ulEl.appendChild(liEl);
+    //     movieCard.appendChild(ulEl);
+    //     cardContainer.appendChild(movieCard);
+    //     });
+    // document.location.href = "results.html"
 }
 
 genreApp.setupEventListeners = () => {
     document.querySelector('form').addEventListener('submit', (event) => {
-        
         event.preventDefault();
         genreApp.getGenres();
-        // const genreChoice = document.getElementById('genre').value;
-        // document.querySelector('').innerHTML = ""
+        
     });
 }
-    
+
 genreApp.init = () => {
         genreApp.setupEventListeners();
-        genreApp.getGenres()
 }
         
 genreApp.init();
