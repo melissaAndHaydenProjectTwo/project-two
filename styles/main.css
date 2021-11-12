@@ -344,8 +344,6 @@ form button {
 
 footer {
   background-color: #fcfbf7;
-  height: 35px;
-  width: 100%;
   text-align: center;
   margin: 0;
   margin-top: -20px;
@@ -437,26 +435,6 @@ li {
 .socialLogos img {
   margin-bottom: -18px;
   margin-top: 1px;
-}
-
-.socialHide {
-  display: none;
-  top: 70px;
-  left: 90.25%;
-  background-color: transparent;
-  font-size: 25px;
-}
-@media (max-width: 1000px) {
-  .socialHide {
-    display: none;
-    top: 70px;
-    left: 90.25%;
-    background-color: transparent;
-    font-size: 25px;
-  }
-  .socialHide img {
-    width: 5%;
-  }
 }
 
 .headerWrapper {
