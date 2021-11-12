@@ -26,8 +26,7 @@ figure {
 }
 
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   height: 0;
   overflow: visible;
 }
@@ -140,8 +139,7 @@ fieldset {
 }
 
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   color: inherit;
   display: table;
   max-width: 100%;
@@ -159,8 +157,7 @@ textarea {
 }
 
 [type=checkbox], [type=radio] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0;
 }
 
@@ -212,13 +209,11 @@ template {
 }
 
 html {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 *, *:before, *:after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 .sr-only {
@@ -236,19 +231,10 @@ html {
 }
 
 form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
 }
 form label {
@@ -282,12 +268,6 @@ form button {
   border-radius: 25px;
 }
 
-::-webkit-input-placeholder {
-  text-transform: uppercase;
-  font-family: "Rubik", sans-serif;
-  font-weight: 300;
-}
-
 ::-moz-placeholder {
   text-transform: uppercase;
   font-family: "Rubik", sans-serif;
@@ -295,12 +275,6 @@ form button {
 }
 
 :-ms-input-placeholder {
-  text-transform: uppercase;
-  font-family: "Rubik", sans-serif;
-  font-weight: 300;
-}
-
-::-ms-input-placeholder {
   text-transform: uppercase;
   font-family: "Rubik", sans-serif;
   font-weight: 300;
@@ -344,8 +318,6 @@ form button {
 
 footer {
   background-color: #fcfbf7;
-  height: 35px;
-  width: 100%;
   text-align: center;
   margin: 0;
   margin-top: -20px;
@@ -400,8 +372,6 @@ li {
 }
 
 .socials {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-bottom: 0;
   width: 195.3px;
@@ -412,17 +382,10 @@ li {
   }
 }
 .socials .socialsList {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 100%;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
 }
 .socials .socialsList a {
   margin-top: 3px;
@@ -437,26 +400,6 @@ li {
 .socialLogos img {
   margin-bottom: -18px;
   margin-top: 1px;
-}
-
-.socialHide {
-  display: none;
-  top: 70px;
-  left: 90.25%;
-  background-color: transparent;
-  font-size: 25px;
-}
-@media (max-width: 1000px) {
-  .socialHide {
-    display: none;
-    top: 70px;
-    left: 90.25%;
-    background-color: transparent;
-    font-size: 25px;
-  }
-  .socialHide img {
-    width: 5%;
-  }
 }
 
 .headerWrapper {
@@ -479,7 +422,7 @@ li {
 .hamburger {
   background-color: transparent;
   border: 0;
-  color: #fcfbf7;
+  color: red;
   font-size: 5rem;
   cursor: pointer;
   display: none;
@@ -487,8 +430,6 @@ li {
 @media (max-width: 1000px) {
   .hamburger {
     z-index: 1;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     position: absolute;
     top: 0;
@@ -539,4 +480,4 @@ body {
 
 li {
   color: #fcfbf7;
-}
+}/*# sourceMappingURL=main.css.map */

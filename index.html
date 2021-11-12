@@ -15,42 +15,10 @@
 </head>
 
 <body>
+    <!-- header for secondary logo, animation to be added -->
     <header>
-        <!--sass patial named homePage for heaader-->
-        <section class="headerWrapper">
-            <!-- This is where the "H1" will go -->
-            <img src="./assets/thatGenreLogo.png" alt="Application Logo with a megaphone">
-            <form action="submit">
-                <label for="genre">search for your favourite genre</label>
-                <select name="genre" id="genre">
-                    <option value="action" id="28">Action</option>
-                    <option value="adventure" id="12">Adventure</option>
-                    <option value="animation" id="16">Animation</option>
-                    <option value="comedy" id="35">Comedy</option>
-                    <option value="crime" id="80">Crime</option>
-                    <option value="documentary" id="99">Documentary</option>
-                    <option value="drama" id="18">Drama</option>
-                    <option value="family" id="10751">Family</option>
-                    <option value="fantasy" id="14">Fantasy</option>
-                    <option value="history" id="36">History</option>
-                    <option value="horror" id="27">Horror</option>
-                    <option value="music" id="10402">Music</option>
-                    <option value="mystery" id="9648">Mystery</option>
-                    <option value="romance" id="10749">Romance</option>
-                    <option value="sci-fi" id="878">Sci-Fi</option>
-                    <option value="tvMovie" id="10770">TV Movie</option>
-                    <option value="thriller" id="53">Thriller</option>
-                    <option value="war" id="10752">War</option>
-                    <option value="western" id="37">Western</option>
-                </select>
-                <button type="submit" id="movieButton">Show me the movies!</button>
-            </form>
-        </section>
-    </header>
-    <main>
-        <!-- Corner LOGO named results page-->
         <div class="secondaryLogo">
-            <img src="./assets/thatGenreSecondaryLogo.png" alt="That Genre">
+            <img src="./assets/thatGenreSecondaryLogo.png" alt="That Genre Logo">
         </div>
         <button id="hamburger" class="hamburger">=</button>
         <div class="socialHide" id="socialHide">
@@ -58,6 +26,41 @@
             <img src="./assets/instagramlogo.png" alt="logo for Instagram">
             <img src="./assets/twitterLogo.png" alt="logo for Twitter">
         </div>
+    </header>
+    <!-- main section for dropdown menu and movie cards -->
+    <main class="headerWrapper">
+        <img src="./assets/thatGenreLogo.png" alt="Application Logo with a megaphone">
+        <form action="submit">
+            <label for="genre">search for your favourite genre</label>
+            <select name="genre" id="genre">
+                <option value="action" id="28">Action</option>
+                <option value="adventure" id="12">Adventure</option>
+                <option value="animation" id="16">Animation</option>
+                <option value="comedy" id="35">Comedy</option>
+                <option value="crime" id="80">Crime</option>
+                <option value="documentary" id="99">Documentary</option>
+                <option value="drama" id="18">Drama</option>
+                <option value="family" id="10751">Family</option>
+                <option value="fantasy" id="14">Fantasy</option>
+                <option value="history" id="36">History</option>
+                <option value="horror" id="27">Horror</option>
+                <option value="music" id="10402">Music</option>
+                <option value="mystery" id="9648">Mystery</option>
+                <option value="romance" id="10749">Romance</option>
+                <option value="sci-fi" id="878">Sci-Fi</option>
+                <option value="tvMovie" id="10770">TV Movie</option>
+                <option value="thriller" id="53">Thriller</option>
+                <option value="war" id="10752">War</option>
+                <option value="western" id="37">Western</option>
+            </select>
+            <button type="submit" id="movieButton">Show me the movies!</button>
+        </form>
+        <ul class="gridContainer wrapper" id="cards">
+            <!-- JAVASCRIPT CONTENT GETS APPENDED HERE -->
+        </ul>
+    </main>
+    <!-- Side bar for socials on desktop view -->
+    <section class="sidebar">
         <div class="socials" id="socialMenu">
             <div class="socialLogos">
                 <img src="./assets/facebookLogo.png" alt="logo for Facebook">
@@ -70,46 +73,13 @@
                 <a href="#">@ThatGenreTweet</a>
             </div>
         </div>
-        <section class="wrapper">
-            <!-- <form action="submit">
-                <label for="genre">search for your favourite genre</label>
-                <select name="genre" id="genre">
-                    <option value="action" id="28">Action</option>
-                    <option value="adventure" id="12">Adventure</option>
-                    <option value="animation" id="16">Animation</option>
-                    <option value="comedy" id="35">Comedy</option>
-                    <option value="crime" id="80">Crime</option>
-                    <option value="documentary" id="99">Documentary</option>
-                    <option value="drama" id="18">Drama</option>
-                    <option value="family" id="10751">Family</option>
-                    <option value="fantasy" id="14">Fantasy</option>
-                    <option value="history" id="36">History</option>
-                    <option value="horror" id="27">Horror</option>
-                    <option value="music" id="10402">Music</option>
-                    <option value="mystery" id="9648">Mystery</option>
-                    <option value="romance" id="10749">Romance</option>
-                    <option value="sci-fi" id="878">Sci-Fi</option>
-                    <option value="tvMovie" id="10770">TV Movie</option>
-                    <option value="thriller" id="53">Thriller</option>
-                    <option value="war" id="10752">War</option>
-                    <option value="western" id="37">Western</option>
-                </select>
-                <!-- button -->
-                <!-- <button></button>
-            </form> --> 
-
-            <!-- HOW THE HTML WILL BE STRUCTURED WHEN JS EVENTLISTENER IS ACTIVATED -->
-
-            <!-- GENRE MOVIE CARDS GO IN HERE -->
-            <ul class="gridContainer wrapper" id="cards">
-                <!-- JAVASCRIPT CONTENT GETS APPENDED HERE -->
-            </ul>
-        </section>
-    </main>
+    </section>
+    
     <footer>
         <p>Made at <a href="https://junocollege.com/">Juno College</a></p>
     </footer>
     <script src="scripts.js"></script>
     <script src="./hamburger.js"></script>
 </body>
+
 </html>
