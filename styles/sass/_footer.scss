@@ -3,6 +3,9 @@ footer {
     text-align: center;
     margin: 0;
     margin-top: -20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     p {
         font-family: $primary-font;
         color: $primary-black;

@@ -2,9 +2,23 @@
     max-width: 1400px;
     width: 60%;
     margin: 6% auto;
+    margin-bottom: -32px;
     border: 1px solid $primary-white;
     border-radius: 25px 25px 0 0;
     img {
         padding: 5% 20%;
+    }
+}
+
+img.active {
+    animation: fadeOut 1s ease forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
     }
 }

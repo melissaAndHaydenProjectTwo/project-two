@@ -1,39 +1,45 @@
-// main section {
-//     border: 1px solid $primary-white;
-//     border-radius: 15px 15px 0 0;
-//     border-bottom: none;
-//     padding-bottom: 100px;
-//     @media (max-width: 1200px){
-//             border: none;
-//     }
-        .gridContainer {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            grid-template-rows: 1fr 1fr;
-            gap: 60px 60px;
-            margin: 0 auto;
-            padding: 50px;
-                .cardContainer {
-                    border: 2px solid $primary-white;
-                    border-radius: 5%;
-                    font-family: $primary-font;
-                    font-weight: 400;
-                    letter-spacing: 2px;
-                    width: 200px;
-                    margin: 0 auto;
-                        ul{
-                            padding: 15px;
-                                h2 {
-                                    padding-top: 50px;
-                                }
-                                p {
-                                    font-style: italic;
-                                }
-                        }    
-                }
-        }       
-// }
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: 1fr 1fr;
+    gap: 60px 60px;
+    margin: 0 auto;
+    padding: 157px 0;
+    .cardContainer {
+        border: 2px solid $primary-white;
+        border-radius: 5%;
+        font-family: $primary-font;
+        font-weight: 400;
+        letter-spacing: 2px;
+        width: 200px;
+        margin: 0 auto;
+        transform: translate(-50%, -50%);
+        animation: flip 1.89s ease-out forwards;
+    }
+}
+
+@keyframes flip {
+    0% {
+        transform: rotateY(180deg);
+    }
+    50% {
+        transform: rotateY(90deg);
+    }
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+.cardContainer ul {
+    padding: 15px;
+    h2 {
+        padding-top: 50px;
+    }
+    p {
+        font-style: italic;
+    }
+}
 
 li {
-    list-style: none;
-}
+        list-style: none;
+    }
