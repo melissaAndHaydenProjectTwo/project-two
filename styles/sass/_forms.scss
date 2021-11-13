@@ -42,3 +42,20 @@ form {
         font-family: $secondary-font;
         font-weight: 300;
     }
+
+form.active {
+    // animation-duration: 2s;
+    // animation-name: slideup;
+    // animation-timing-function: ease;
+    // animation-fill-mode: ;
+    animation: slideup 2s ease forwards;
+}
+
+@keyframes slideup {
+    from {
+        margin-top: 0;
+    }
+    to {
+        margin-top: -50%;
+    }
+}

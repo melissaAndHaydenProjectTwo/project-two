@@ -312,13 +312,36 @@ form button {
   font-weight: 300;
 }
 
+form.active {
+  -webkit-animation: slideup 2s ease forwards;
+          animation: slideup 2s ease forwards;
+}
+
+@-webkit-keyframes slideup {
+  from {
+    margin-top: 0;
+  }
+  to {
+    margin-top: -50%;
+  }
+}
+
+@keyframes slideup {
+  from {
+    margin-top: 0;
+  }
+  to {
+    margin-top: -50%;
+  }
+}
 footer {
   background-color: #fcfbf7;
-  height: 35px;
-  width: 100%;
   text-align: center;
   margin: 0;
   margin-top: -20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 footer p {
   font-family: "Bebas Neue", cursive;
@@ -339,7 +362,7 @@ footer p a {
   grid-template-rows: 1fr 1fr;
   gap: 60px 60px;
   margin: 0 auto;
-  padding: 50px;
+  padding: 157px 0;
 }
 .gridContainer .cardContainer {
   border: 2px solid #fcfbf7;
@@ -349,14 +372,48 @@ footer p a {
   letter-spacing: 2px;
   width: 200px;
   margin: 0 auto;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: flip 1.89s ease-out forwards;
+          animation: flip 1.89s ease-out forwards;
 }
-.gridContainer .cardContainer ul {
+
+@-webkit-keyframes flip {
+  0% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  50% {
+    -webkit-transform: rotateY(90deg);
+            transform: rotateY(90deg);
+  }
+  100% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+}
+
+@keyframes flip {
+  0% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  50% {
+    -webkit-transform: rotateY(90deg);
+            transform: rotateY(90deg);
+  }
+  100% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+}
+.cardContainer ul {
   padding: 15px;
 }
-.gridContainer .cardContainer ul h2 {
+.cardContainer ul h2 {
   padding-top: 50px;
 }
-.gridContainer .cardContainer ul p {
+.cardContainer ul p {
   font-style: italic;
 }
 
@@ -364,17 +421,17 @@ li {
   list-style: none;
 }
 
-main {
-  position: relative;
+.sidebar {
+  width: 20%;
+  margin-bottom: 10px;
+  position: fixed;
+  bottom: 5%;
 }
 
 .socials {
-  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  bottom: 50px;
-  left: 5px;
   margin-bottom: 0;
   width: 195.3px;
 }
@@ -411,6 +468,70 @@ main {
   margin-top: 1px;
 }
 
+.headerWrapper {
+  max-width: 1400px;
+  width: 60%;
+  margin: 6% auto;
+  margin-bottom: -32px;
+  border: 1px solid #fcfbf7;
+  border-radius: 25px 25px 0 0;
+}
+.headerWrapper img {
+  padding: 5% 20%;
+}
+
+img.active {
+  -webkit-animation: fadeOut 1s ease forwards;
+          animation: fadeOut 1s ease forwards;
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.secondaryLogo {
+  position: absolute;
+  top: 0;
+  width: 17%;
+}
+.secondaryLogo img {
+  opacity: 0;
+}
+.secondaryLogo img.active {
+  -webkit-animation: fadeIn 3s ease forwards;
+          animation: fadeIn 3s ease forwards;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .hamburger {
   background-color: transparent;
   border: 0;
@@ -449,23 +570,6 @@ main {
   .socialHide img {
     width: 5%;
   }
-}
-
-.headerWrapper {
-  max-width: 1400px;
-  width: 60%;
-  margin: 6% auto;
-  border: 1px solid #fcfbf7;
-  border-radius: 25px 25px 0 0;
-}
-.headerWrapper img {
-  padding: 5% 20%;
-}
-
-.secondaryLogo {
-  position: absolute;
-  top: 0;
-  width: 17%;
 }
 
 img {

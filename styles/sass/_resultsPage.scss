@@ -2,4 +2,20 @@
     position: absolute;
     top: 0;
     width: 17%;
+    img {
+        opacity: 0;
+        &.active {
+            animation: fadeIn 3s ease forwards;
+        }
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
