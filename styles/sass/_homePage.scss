@@ -9,9 +9,10 @@
         padding: 5% 20%;
     }
 }
-
 img.active {
     animation: fadeOut 1s ease forwards;
+    position: relative;
+    z-index: -10;
 }
 
 @keyframes fadeOut {
