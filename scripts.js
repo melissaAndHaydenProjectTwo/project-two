@@ -79,13 +79,21 @@ genreApp.getGenres = () => {
         });
 }
 
+const animation = document.querySelector('form');
+// animation.addEventListener('animationend', () => {
+//     animation.classList.remove('active');
+// })
+const fadeOut = document.querySelector('main>img')
+const fadeIn = document.querySelector('div.secondaryLogo>img')
+
 genreApp.setupEventListeners = () => {
     document.querySelector('form').addEventListener('submit', (event) => {
-        
         event.preventDefault();
+        animation.classList.toggle('active');
+        console.log(animation.classList)
+        fadeOut.classList.toggle('active');
+        fadeIn.classList.toggle('active');
         genreApp.getGenres();
-        // const genreChoice = document.getElementById('genre').value;
-        // document.querySelector('').innerHTML = ""
     });
 }
     
