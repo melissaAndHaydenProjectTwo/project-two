@@ -312,36 +312,6 @@ form button {
   font-weight: 300;
 }
 
-.wrapper form {
-  display: grid;
-  grid-template-columns: 1fr 0.3fr;
-  grid-template-rows: 1fr 1fr;
-  width: 70%;
-}
-
-.wrapper label {
-  visibility: hidden;
-  grid-column: 1/-1;
-}
-
-.wrapper select {
-  grid-column: 1/2;
-  width: 100%;
-  border-radius: 25px 0 0 25px;
-}
-
-.wrapper button {
-  background-image: url("../assets/megaphone2.png");
-  background-repeat: no-repeat;
-  margin-bottom: 10px;
-  padding: 23px;
-  background-size: contain;
-  background-position: center;
-  width: 100%;
-  border: 1px solid #fcfbf7;
-  border-radius: 0 25px 25px 0;
-}
-
 footer {
   background-color: #fcfbf7;
   height: 35px;
@@ -363,18 +333,7 @@ footer p a {
   font-size: 18px;
 }
 
-main section {
-  border: 1px solid #fcfbf7;
-  border-radius: 15px 15px 0 0;
-  border-bottom: none;
-  padding-bottom: 100px;
-}
-@media (max-width: 1200px) {
-  main section {
-    border: none;
-  }
-}
-main section .gridContainer {
+.gridContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-rows: 1fr 1fr;
@@ -382,7 +341,7 @@ main section .gridContainer {
   margin: 0 auto;
   padding: 50px;
 }
-main section .gridContainer .cardContainer {
+.gridContainer .cardContainer {
   border: 2px solid #fcfbf7;
   border-radius: 5%;
   font-family: "Bebas Neue", cursive;
@@ -391,13 +350,13 @@ main section .gridContainer .cardContainer {
   width: 200px;
   margin: 0 auto;
 }
-main section .gridContainer .cardContainer ul {
+.gridContainer .cardContainer ul {
   padding: 15px;
 }
-main section .gridContainer .cardContainer ul h2 {
+.gridContainer .cardContainer ul h2 {
   padding-top: 50px;
 }
-main section .gridContainer .cardContainer ul p {
+.gridContainer .cardContainer ul p {
   font-style: italic;
 }
 
@@ -495,7 +454,6 @@ main {
 .headerWrapper {
   max-width: 1400px;
   width: 60%;
-  height: 100vh;
   margin: 6% auto;
   border: 1px solid #fcfbf7;
   border-radius: 25px 25px 0 0;

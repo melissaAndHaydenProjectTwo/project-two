@@ -52,34 +52,31 @@ genreApp.getGenres = () => {
     .map(a => a.x)
     .slice(0, 4);    
 
-    window.localStorage.setItem('cardContainer', JSON.stringify(arrayOfMovies))
-    window.localStorage.getItem('cardContainer')
-    // console.log(window.localStorage.getItem('cardContainer'))
+
     // GET FOUR MOVIES FROM THE LARGE ARRAY BASED ON THE USER INPUT
     // PRINT THE FOUR MOVIE RESULTS TO THE PAGE 
 
-    // const cardContainer = document.querySelector('.gridContainer');
-    // cardContainer.innerHTML = ""
+    const cardContainer = document.querySelector('.gridContainer');
+    cardContainer.innerHTML = ""
 
-    // fourMoviesArray.forEach((movie) => {
-    //     const movieCard = document.createElement('li');
-    //     movieCard.classList.add('cardContainer');
-    //     const ulEl = document.createElement('ul');
-    //     const liEl = document.createElement('li');
+    fourMoviesArray.forEach((movie) => {
+        const movieCard = document.createElement('li');
+        movieCard.classList.add('cardContainer');
+        const ulEl = document.createElement('ul');
+        const liEl = document.createElement('li');
 
-    //     const titleHeading = document.createElement('h2');
-    //     titleHeading.innerText = movie.title
+        const titleHeading = document.createElement('h2');
+        titleHeading.innerText = movie.title
 
-    //     const releaseDate = document.createElement('p');
-    //     releaseDate.innerText = `RELEASE DATE: ${movie.release_date}`
+        const releaseDate = document.createElement('p');
+        releaseDate.innerText = `RELEASE DATE: ${movie.release_date}`
 
-    //     liEl.appendChild(titleHeading);
-    //     liEl.appendChild(releaseDate);
-    //     ulEl.appendChild(liEl);
-    //     movieCard.appendChild(ulEl);
-    //     cardContainer.appendChild(movieCard);
-    //     });
-    // document.location.href = "results.html"
+        liEl.appendChild(titleHeading);
+        liEl.appendChild(releaseDate);
+        ulEl.appendChild(liEl);
+        movieCard.appendChild(ulEl);
+        cardContainer.appendChild(movieCard);
+        });
 }
 
 genreApp.setupEventListeners = () => {
@@ -91,7 +88,8 @@ genreApp.setupEventListeners = () => {
 }
 
 genreApp.init = () => {
-        genreApp.setupEventListeners();
+    genreApp.setupEventListeners();
+    genreApp.getGenres();
 }
         
 genreApp.init();
