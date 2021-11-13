@@ -28,17 +28,16 @@ genreApp.callApi = async function (url, page = 1) {
 
 // CONNECT USER INPUT TO GENRE_IDS FROM API
 genreApp.getGenres = () => {
-    
     genreApp.callApi(genreApp.apiUrl);
     const genreChoices = document.querySelectorAll('option')
-    console.log(genreChoices)
+    // console.log(genreChoices)
     let genreType 
     genreChoices.forEach((param) => {
         if (param.selected === true) {
             genreType = param.id
         }
     })
-    
+
     const movieGenres = arrayOfMovies.filter((genres) => {
         for (let i = 0; i < genres.genre_ids.length; i++){
             if (genres.genre_ids[i] == genreType) {
@@ -48,10 +47,10 @@ genreApp.getGenres = () => {
     });
 
     const fourMoviesArray = movieGenres
-    .map(x => ({ x, r: Math.random() }))
-    .sort((a, b) => a.r - b.r)
-    .map(a => a.x)
-    .slice(0, 4);    
+    .map(genres => ({genres, n: Math.random() }))
+    .sort((genreOne, genreTwo) => genreOne.n - genreTwo.n)
+    .map(genreOne => genreOne.genres)
+    .slice(0, 4);   
 
     // GET FOUR MOVIES FROM THE LARGE ARRAY BASED ON THE USER INPUT
     // PRINT THE FOUR MOVIE RESULTS TO THE PAGE 
@@ -79,27 +78,23 @@ genreApp.getGenres = () => {
         });
 }
 
-const animation = document.querySelector('form');
-// animation.addEventListener('animationend', () => {
-//     animation.classList.remove('active');
-// })
+const formTransition = document.querySelector('form')
 const fadeOut = document.querySelector('main>img')
 const fadeIn = document.querySelector('div.secondaryLogo>img')
-
+    
 genreApp.setupEventListeners = () => {
     document.querySelector('form').addEventListener('submit', (event) => {
         event.preventDefault();
-        animation.classList.toggle('active');
-        console.log(animation.classList)
-        fadeOut.classList.toggle('active');
-        fadeIn.classList.toggle('active');
+        formTransition.classList.add('active');
+        fadeOut.classList.add('active');
+        fadeIn.classList.add('active');
         genreApp.getGenres();
     });
 }
-    
+
 genreApp.init = () => {
-        genreApp.setupEventListeners();
-        genreApp.getGenres()
+    genreApp.setupEventListeners();
+    genreApp.getGenres();
 }
         
 genreApp.init();

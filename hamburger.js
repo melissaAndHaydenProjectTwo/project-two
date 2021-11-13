@@ -9,3 +9,6 @@ document.onreadystatechange = function () {
         });
     }
 }
+
+// cardContainer.innerHTML = ""
+// cardContainer.appendChild(movieCard);

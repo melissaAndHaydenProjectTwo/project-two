@@ -250,6 +250,7 @@ form {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
+  z-index: 10;
 }
 form label {
   color: #fcfbf7;
@@ -363,6 +364,7 @@ footer p a {
   gap: 60px 60px;
   margin: 0 auto;
   padding: 157px 0;
+  z-index: 10;
 }
 .gridContainer .cardContainer {
   border: 2px solid #fcfbf7;
@@ -483,6 +485,8 @@ li {
 img.active {
   -webkit-animation: fadeOut 1s ease forwards;
           animation: fadeOut 1s ease forwards;
+  position: relative;
+  z-index: -10;
 }
 
 @-webkit-keyframes fadeOut {
