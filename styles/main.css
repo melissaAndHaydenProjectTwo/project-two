@@ -548,32 +548,47 @@ img.active {
     display: flex;
     position: absolute;
     top: 0;
-    left: 90%;
+    right: 20px;
+  }
+}
+
+.hamburgerContainer {
+  display: none;
+  width: 92px;
+}
+@media (max-width: 1000px) {
+  .hamburgerContainer {
+    display: block;
+    position: absolute;
+    right: 20px;
   }
 }
 
 .socialHide {
-  display: none;
-  top: 70px;
-  left: 90.25%;
+  position: absolute;
+  top: 75px;
+  right: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: transparent;
   font-size: 25px;
 }
 @media (max-width: 1000px) {
   .socialHide {
     display: none;
-    top: 70px;
-    left: 90.25%;
     background-color: transparent;
     font-size: 25px;
-  }
-  .socialHide img {
-    width: 5%;
   }
 }
 
 img {
   width: 100%;
+  display: block;
 }
 
 .wrapper {
