@@ -284,7 +284,7 @@ form button {
   font-size: 1.5rem;
   width: 70%;
   padding: 12px;
-  border: 1px solid #fcfbf7;
+  border: 2px solid #fcfbf7;
   border-radius: 25px;
 }
 @media (max-width: 748px) {
@@ -346,6 +346,11 @@ form.active {
     margin-top: -50%;
   }
 }
+form button:hover,
+form button:focus {
+  border: 2px solid #e8786b;
+}
+
 footer {
   background-color: #fcfbf7;
   text-align: center;
@@ -617,6 +622,9 @@ img.active {
   top: 0;
   right: 5px;
 }
+.hamburgerContainer :hover, .hamburgerContainer :focus {
+  color: #e8786b;
+}
 @media (max-width: 1000px) {
   .hamburgerContainer {
     display: block;
@@ -646,11 +654,18 @@ img.active {
 }
 .socialHide img {
   width: 50px;
+  border: 2px solid transparent;
+  border-radius: 10px;
 }
 @media (max-width: 360px) {
   .socialHide img {
     width: 35px;
   }
+}
+
+.socialHide img:hover,
+.socialHide img:focus {
+  border: 2px solid #e8786b;
 }
 
 img {
