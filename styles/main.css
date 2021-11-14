@@ -270,7 +270,6 @@ form label {
   }
 }
 form select {
-  -webkit-appearance: none;
   width: 70%;
   border: none;
   border-radius: 25px;
@@ -604,7 +603,6 @@ img.active {
   }
 }
 .hamburger {
-  -webkit-appearance: none;
   background-color: transparent;
   border: 0;
   color: #fcfbf7;
