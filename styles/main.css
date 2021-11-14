@@ -252,6 +252,11 @@ form {
   margin: 0 auto;
   z-index: 10;
 }
+@media (max-width: 748px) {
+  form {
+    margin: 0 25px;
+  }
+}
 form label {
   color: #fcfbf7;
   font-family: "Bebas Neue", cursive;
@@ -281,6 +286,12 @@ form button {
   padding: 12px;
   border: 1px solid #fcfbf7;
   border-radius: 25px;
+}
+@media (max-width: 748px) {
+  form select,
+form button {
+    width: 100%;
+  }
 }
 
 ::-webkit-input-placeholder {
@@ -343,6 +354,7 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+  z-index: 10;
 }
 footer p {
   font-family: "Bebas Neue", cursive;
@@ -363,8 +375,13 @@ footer p a {
   grid-template-rows: 1fr 1fr;
   gap: 60px 60px;
   margin: 0 auto;
-  padding: 157px 0;
+  padding: 110px 0;
   z-index: 10;
+}
+@media (max-width: 1148px) {
+  .gridContainer {
+    padding-top: 60px;
+  }
 }
 .gridContainer .cardContainer {
   border: 2px solid #fcfbf7;
@@ -429,6 +446,11 @@ li {
   position: fixed;
   bottom: 5%;
 }
+@media (max-width: 1148px) {
+  .sidebar {
+    display: none;
+  }
+}
 
 .socials {
   display: -webkit-box;
@@ -436,11 +458,6 @@ li {
   display: flex;
   margin-bottom: 0;
   width: 195.3px;
-}
-@media (max-width: 1000px) {
-  .socials {
-    display: none;
-  }
 }
 .socials .socialsList {
   display: -webkit-box;
@@ -476,10 +493,34 @@ li {
   margin: 6% auto;
   margin-bottom: -32px;
   border: 1px solid #fcfbf7;
-  border-radius: 25px 25px 0 0;
+  border-radius: 25px;
+}
+@media (max-width: 748px) {
+  .headerWrapper {
+    border: none;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
 }
 .headerWrapper img {
   padding: 5% 20%;
+}
+@media (max-width: 748px) {
+  .headerWrapper img {
+    padding: 0 8%;
+  }
 }
 
 img.active {
@@ -509,7 +550,21 @@ img.active {
 .secondaryLogo {
   position: absolute;
   top: 0;
-  width: 17%;
+}
+@media (min-width: 749px) {
+  .secondaryLogo {
+    width: 21%;
+    max-width: 260px;
+  }
+}
+@media (max-width: 748px) {
+  .secondaryLogo {
+    width: 70%;
+    position: absolute;
+    margin: 0 auto;
+    top: -10px;
+    right: 16%;
+  }
 }
 .secondaryLogo img {
   opacity: 0;
@@ -543,6 +598,8 @@ img.active {
   font-size: 5rem;
   cursor: pointer;
   display: none;
+  position: absolute;
+  right: 0;
 }
 @media (max-width: 1000px) {
   .hamburger {
@@ -550,15 +607,15 @@ img.active {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    position: absolute;
-    top: 0;
-    right: 20px;
   }
 }
 
 .hamburgerContainer {
   display: none;
   width: 92px;
+  position: absolute;
+  top: 0;
+  right: 5px;
 }
 @media (max-width: 1000px) {
   .hamburgerContainer {
@@ -572,13 +629,6 @@ img.active {
   position: absolute;
   top: 75px;
   right: 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   background-color: transparent;
   font-size: 25px;
 }
@@ -587,6 +637,19 @@ img.active {
     display: none;
     background-color: transparent;
     font-size: 25px;
+  }
+}
+@media (max-width: 360px) {
+  .socialHide {
+    padding-right: 10px;
+  }
+}
+.socialHide img {
+  width: 50px;
+}
+@media (max-width: 360px) {
+  .socialHide img {
+    width: 35px;
   }
 }
 
@@ -614,4 +677,10 @@ body {
 
 li {
   color: #fcfbf7;
+}
+
+@media (max-width: 748px) {
+  header {
+    height: 100px;
+  }
 }
