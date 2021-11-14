@@ -485,6 +485,7 @@ li {
 .socialLogos img {
   margin-bottom: -18px;
   margin-top: 1px;
+  padding-bottom: 4px;
 }
 
 .headerWrapper {
