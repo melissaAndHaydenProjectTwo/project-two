@@ -19,6 +19,7 @@ form {
     }
     }
     select {
+        -webkit-appearance: none;
         width: 70%;
         border: none;
         border-radius: 25px;
@@ -28,7 +29,6 @@ form {
         font-size: 1.5rem;
         letter-spacing: 1px;
         text-transform: uppercase;
-        -webkit-appearance: none;
     }
     button {
         background-color: $primary-black;

@@ -270,6 +270,7 @@ form label {
   }
 }
 form select {
+  -webkit-appearance: none;
   width: 70%;
   border: none;
   border-radius: 25px;
@@ -279,7 +280,6 @@ form select {
   font-size: 1.5rem;
   letter-spacing: 1px;
   text-transform: uppercase;
-  -webkit-appearance: none;
 }
 form button {
   background-color: #050400;
@@ -604,6 +604,7 @@ img.active {
   }
 }
 .hamburger {
+  -webkit-appearance: none;
   background-color: transparent;
   border: 0;
   color: #fcfbf7;
@@ -612,7 +613,6 @@ img.active {
   display: none;
   position: absolute;
   right: 0;
-  -webkit-appearance: none;
 }
 @media (max-width: 1148px) {
   .hamburger {
