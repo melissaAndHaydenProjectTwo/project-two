@@ -612,7 +612,6 @@ img.active {
   display: none;
   position: absolute;
   right: 0;
-  -webkit-appearance: none;
 }
 @media (max-width: 1148px) {
   .hamburger {
@@ -629,9 +628,6 @@ img.active {
   position: absolute;
   top: 0;
   right: 5px;
-}
-.hamburgerContainer :hover, .hamburgerContainer :focus {
-  color: #e8786b;
 }
 @media (max-width: 1148px) {
   .hamburgerContainer {
@@ -662,18 +658,11 @@ img.active {
 }
 .socialHide img {
   width: 50px;
-  border: 2px solid transparent;
-  border-radius: 10px;
 }
 @media (max-width: 379px) {
   .socialHide img {
     width: 35px;
   }
-}
-
-.socialHide img:hover,
-.socialHide img:focus {
-  border: 2px solid #e8786b;
 }
 
 img {
