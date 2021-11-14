@@ -38,3 +38,9 @@ body {
 li {
     color: $primary-white;
 }
+
+@media (max-width: 748px) {
+    header {
+        height: 100px;
+    }
+}
