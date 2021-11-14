@@ -4,8 +4,12 @@
     grid-template-rows: 1fr 1fr;
     gap: 60px 60px;
     margin: 0 auto;
-    padding: 157px 0;
+    padding: 110px 0;
     z-index: 10;
+    @media (max-width: 1148px) {
+        padding-top: 60px;
+    }
+
     .cardContainer {
         border: 2px solid $primary-white;
         border-radius: 5%;
@@ -42,5 +46,5 @@
 }
 
 li {
-        list-style: none;
-    }
+    list-style: none;
+}

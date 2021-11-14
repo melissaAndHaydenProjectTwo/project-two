@@ -50,7 +50,7 @@ genreApp.getGenres = () => {
     .map(genres => ({genres, n: Math.random() }))
     .sort((genreOne, genreTwo) => genreOne.n - genreTwo.n)
     .map(genreOne => genreOne.genres)
-    .slice(0, 4);   
+    .slice(0, 6);   
 
     // GET FOUR MOVIES FROM THE LARGE ARRAY BASED ON THE USER INPUT
     // PRINT THE FOUR MOVIE RESULTS TO THE PAGE 

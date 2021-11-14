@@ -4,15 +4,16 @@
     margin-bottom: 10px;
     position: fixed;
     bottom: 5%;
+    @media (max-width: 1148px) {
+        display: none;
+    }
 }
 
 .socials {
     display: flex;
     margin-bottom: 0;
     width: 195.3px;
-    @media (max-width: 1000px) {
-        display: none;
-    }
+    
     .socialsList {
         display: flex;
         flex-direction: column;
