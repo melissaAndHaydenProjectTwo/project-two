@@ -17,6 +17,10 @@ footer {
             font-family: $primary-font;
             color: $primary-black;
             font-size: 18px;
+            &:hover,
+            &:focus {
+                color: $accent-color;
+            }
         }
     }
 }

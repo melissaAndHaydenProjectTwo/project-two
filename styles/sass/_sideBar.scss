@@ -13,25 +13,28 @@
     display: flex;
     margin-bottom: 0;
     width: 195.3px;
-    
-    .socialsList {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        justify-content: space-evenly;
-        a {
-            margin-top: 3px;
-            padding: 3px;
-            text-decoration: none;
-        }
-    }
+    margin-left: 15px;
 }
 
 .socialLogos {
     width: 25%;
     margin-top: -5px;
-    img {
-        margin-bottom: -18px;
-        margin-top: 1px;
+    display: flex;
+    a {
+        padding: 0 5px 0 5px;
+        text-decoration: none;
+        border: 2px solid transparent;
+        border-radius: 10px;
+        &:hover, 
+        &:focus {
+            border: 2px solid $accent-color;
+        }
+        img {
+            height: 50px;
+            width: 50px;
+        }
+        span {
+            padding-bottom: 10px;
+        }
     }
 }

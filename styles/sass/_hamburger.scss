@@ -8,7 +8,7 @@
     display: none;
     position: absolute;
     right: 0;
-    @media (max-width: 1000px) {
+    @media (max-width: 1148px) {
         z-index: 1;
         display: flex;
     }
@@ -24,12 +24,11 @@
     & :focus {
         color: rgb(232, 120, 107);
     }
-    @media (max-width: 1000px) {
+    @media (max-width: 1148px) {
         display: block;
         position: absolute;
         right: 20px;
     }
-}
 
 .socialHide {
     position: absolute;
@@ -37,19 +36,20 @@
     right: 0px;
     background-color: transparent;
     font-size: 25px;
-    @media (max-width: 1000px) {
+    @media (max-width: 1148px) {
         display: none;
         background-color: transparent;
         font-size: 25px;
     }
-    @media (max-width: 360px) {
-        padding-right: 10px;
+
+    @media (max-width: 379px) {
+     padding-right: 10px;
     }
     img {
         width: 50px;
         border: 2px solid transparent;
         border-radius: 10px;
-        @media (max-width: 360px) {
+        @media (max-width: 379px) {
             width: 35px;
         }
     }

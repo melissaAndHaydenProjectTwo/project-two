@@ -264,6 +264,11 @@ form label {
   letter-spacing: 1px;
   font-size: 1.5rem;
 }
+@media (max-width: 379px) {
+  form label {
+    font-size: 1.1rem;
+  }
+}
 form select {
   width: 70%;
   border: none;
@@ -373,6 +378,9 @@ footer p a {
   color: #050400;
   font-size: 18px;
 }
+footer p a:hover, footer p a:focus {
+  color: #e8786b;
+}
 
 .gridContainer {
   display: grid;
@@ -463,33 +471,31 @@ li {
   display: flex;
   margin-bottom: 0;
   width: 195.3px;
-}
-.socials .socialsList {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 100%;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-.socials .socialsList a {
-  margin-top: 3px;
-  padding: 3px;
-  text-decoration: none;
+  margin-left: 15px;
 }
 
 .socialLogos {
   width: 25%;
   margin-top: -5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
-.socialLogos img {
-  margin-bottom: -18px;
-  margin-top: 1px;
+.socialLogos a {
+  padding: 0 5px 0 5px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
+.socialLogos a:hover, .socialLogos a:focus {
+  border: 2px solid #e8786b;
+}
+.socialLogos a img {
+  height: 50px;
+  width: 50px;
+}
+.socialLogos a span {
+  padding-bottom: 10px;
 }
 
 .headerWrapper {
@@ -606,7 +612,7 @@ img.active {
   position: absolute;
   right: 0;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1148px) {
   .hamburger {
     z-index: 1;
     display: -webkit-box;
@@ -622,15 +628,15 @@ img.active {
   top: 0;
   right: 5px;
 }
+
+@media (max-width: 1148px) {
+.hamburgerContainer {
+  display: block;
+  position: absolute;
+  right: 20px;
+}
 .hamburgerContainer :hover, .hamburgerContainer :focus {
   color: #e8786b;
-}
-@media (max-width: 1000px) {
-  .hamburgerContainer {
-    display: block;
-    position: absolute;
-    right: 20px;
-  }
 }
 
 .socialHide {
@@ -640,14 +646,14 @@ img.active {
   background-color: transparent;
   font-size: 25px;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1148px) {
   .socialHide {
     display: none;
     background-color: transparent;
     font-size: 25px;
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 379px) {
   .socialHide {
     padding-right: 10px;
   }
@@ -657,7 +663,7 @@ img.active {
   border: 2px solid transparent;
   border-radius: 10px;
 }
-@media (max-width: 360px) {
+@media (max-width: 379px) {
   .socialHide img {
     width: 35px;
   }
