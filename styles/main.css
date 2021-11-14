@@ -589,6 +589,9 @@ img.active {
     font-size: 25px;
   }
 }
+.socialHide img {
+  width: 50px;
+}
 
 img {
   width: 100%;
