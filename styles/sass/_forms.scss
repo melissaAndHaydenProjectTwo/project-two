@@ -28,6 +28,7 @@ form {
         font-size: 1.5rem;
         letter-spacing: 1px;
         text-transform: uppercase;
+        -webkit-appearance: none;
     }
     button {
         background-color: $primary-black;

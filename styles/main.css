@@ -279,6 +279,7 @@ form select {
   font-size: 1.5rem;
   letter-spacing: 1px;
   text-transform: uppercase;
+  -webkit-appearance: none;
 }
 form button {
   background-color: #050400;
@@ -611,6 +612,7 @@ img.active {
   display: none;
   position: absolute;
   right: 0;
+  -webkit-appearance: none;
 }
 @media (max-width: 1148px) {
   .hamburger {
@@ -628,15 +630,15 @@ img.active {
   top: 0;
   right: 5px;
 }
-
-@media (max-width: 1148px) {
-.hamburgerContainer {
-  display: block;
-  position: absolute;
-  right: 20px;
-}
 .hamburgerContainer :hover, .hamburgerContainer :focus {
   color: #e8786b;
+}
+@media (max-width: 1148px) {
+  .hamburgerContainer {
+    display: block;
+    position: absolute;
+    right: 20px;
+  }
 }
 
 .socialHide {
