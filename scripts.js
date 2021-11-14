@@ -68,7 +68,7 @@ genreApp.getGenres = () => {
         titleHeading.innerText = movie.title
 
         const releaseDate = document.createElement('p');
-        releaseDate.innerText = `RELEASE DATE: ${movie.release_date}`
+        releaseDate.innerText = `RELEASE DATE: \n ${movie.release_date}`
 
         liEl.appendChild(titleHeading);
         liEl.appendChild(releaseDate);

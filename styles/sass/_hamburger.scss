@@ -20,6 +20,10 @@
     position: absolute;
     top: 0;
     right: 5px;
+    & :hover,
+    & :focus {
+        color: rgb(232, 120, 107);
+    }
     @media (max-width: 1000px) {
         display: block;
         position: absolute;
@@ -43,8 +47,15 @@
     }
     img {
         width: 50px;
+        border: 2px solid transparent;
+        border-radius: 10px;
         @media (max-width: 360px) {
             width: 35px;
         }
     }
+}
+
+.socialHide img:hover,
+.socialHide img:focus {
+    border: 2px solid rgb(232, 120, 107);
 }
